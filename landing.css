@@ -1,0 +1,520 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 15px 0px;
+    z-index: 2;
+}
+#buttons{
+    margin-right: 30px;
+}
+#secondary-page, #signup{
+    padding: 8px 15px;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 2px;
+    background: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#signup{
+    margin-left: 20px;
+}
+#secondary-page:hover, #signup:hover{
+    background: rgb(59, 135, 242);
+    border: none;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: #240046;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.main{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: -15%;
+    padding: 10px;
+    z-index: 2;
+}
+h1{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+p{
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: lightgrey;
+}
+.buttons{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+}
+#button1, #button2{
+    padding: 8px 30px;
+    text-transform: uppercase;
+    background-color: rgb(59, 135, 242);
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.5s;
+}
+#button1{
+    margin-right: 30px;
+}
+#button1:hover, #button2:hover{
+    box-shadow: 0 0 20px rgb(59, 135, 242);
+    transform: scale(1.1);
+}
+
+#character{
+    width: 40%;
+    height: auto;
+    z-index: 2;
+    animation: updown 5s linear infinite;
+}
+
+@keyframes updown{
+    0%{
+        transform: translateY(-1%);
+    }
+    25%{
+        transform: translateY(-2%);
+    }
+    50%{
+        transform: translateY(2%);
+    }
+    75%{
+        transform: translateY(1%);
+    }
+    100%{
+        transform: translateY(-1%);
+    }
+}
+
+#city{
+    position: absolute;
+    bottom: -1%;
+    width: 40%;
+    height: 50%;
+    z-index: 1;
+}
+#design1{
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 10%;
+    height: 20%;
+    transform: scale(0.3);
+    animation: move1 20s linear infinite;
+}
+@keyframes move1{
+    0%{
+        top: -10%;
+        right: -10%;
+        transform: rotate(-360deg) scale(0.3);
+    }
+    100%{
+        top: 69%;
+        right: 72%;
+        transform: rotate(360deg) scale(0.3);
+    }
+}
+#design2{
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 3%;
+    right: -10%;
+    transform: scale(0.4);
+    animation: move2 25s linear infinite;
+    animation-delay: 6s;
+}
+@keyframes move2{
+    0%{
+        top: 3%;
+        right: -10%;
+        transform: rotate(-360deg) scale(0.3);
+    }
+    100%{
+        top: 69%;
+        right: 72%;
+        transform: rotate(360deg) scale(0.3);
+    }
+}
+#design3{
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: -20%;
+    right: 50%;
+    transform: scale(0.2);
+    animation: move3 15s linear infinite;
+    animation-delay: 12s;
+}
+@keyframes move3{
+    0%{
+        top: -10%;
+        right: 50%;
+        transform: rotate(-360deg) scale(0.2);
+    }
+    100%{
+        top: 69%;
+        right: 72%;
+        transform: rotate(360deg) scale(0.2);
+    }
+}
+
+@media (max-width: 768px){
+    #city{
+       width: 60%; 
+       height: 40%;
+       left: -2%;
+    }
+    .main{
+        width: 50%;
+        height: auto;
+        margin-left: 3%;
+    }
+    .main h1{
+        font-size: 2.3rem;
+    }
+    .main p{
+        font-size: 1rem;
+    }
+    #button1, #button2{
+        font-size: 0.6rem;
+    }
+    #secondary-page, #signup{
+        font-size: 0.5rem;
+    }
+    #character{
+        height: 50%;
+        margin-right: -5%;
+    }
+    #design1{
+        width: 8rem;
+        height: 8rem;
+        top: -20%;
+        right: -40%;
+    }
+    #design2{
+        width: 8rem;
+        height: 8rem;
+        right: -30%;
+    }
+    #design3{
+        width: 7rem;
+        height: 7rem;
+    }
+    @keyframes move1{
+        0%{
+            top: -10%;
+            right: -10%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move2{
+        0%{
+            top: 3%;
+            right: -20%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move3{
+        0%{
+            top: -10%;
+            right: 50%;
+            transform: rotate(-360deg) scale(0.2);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.2);
+        }
+    }
+}
+
+@media (max-width: 603px){
+    .main h1{
+        font-size: 1.9rem;
+    }
+    .main p{
+        font-size: 0.9rem;
+    }
+    #character{
+        width: 47%;
+    }
+    #button1, #button2{
+        font-size: 0.5rem;
+    }
+    @keyframes move1{
+        0%{
+            top: -10%;
+            right: -10%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move2{
+        0%{
+            top: 3%;
+            right: -20%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move3{
+        0%{
+            top: -10%;
+            right: 50%;
+            transform: rotate(-360deg) scale(0.2);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.2);
+        }
+    }
+}
+
+@media (max-width: 552px){
+    #city{
+        display: none;
+    }
+    main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #character{
+        position: absolute;
+        height: 45%;
+        width: 80%;
+        bottom: 10px;
+    }
+    .main{
+        width: 85%;
+        margin-left: 0%;
+        margin-top: -30%;
+    }
+    .main h1{
+        font-size: 2.5rem;
+    }
+    .main p{
+        font-size: 1rem;
+    }
+    @keyframes move1{
+        0%{
+            top: -10%;
+            right: -10%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move2{
+        0%{
+            top: 3%;
+            right: -20%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move3{
+        0%{
+            top: -10%;
+            right: 50%;
+            transform: rotate(-360deg) scale(0.2);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.2);
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .main{
+        margin-top: -40%;
+    }
+    .main h1{
+        font-size: 2rem;
+    }
+    .main p{
+        font-size: 0.9rem;
+    }
+    @keyframes move1{
+        0%{
+            top: -10%;
+            right: -10%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move2{
+        0%{
+            top: 3%;
+            right: -20%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }
+    @keyframes move3{
+        0%{
+            top: -10%;
+            right: 50%;
+            transform: rotate(-360deg) scale(0.2);
+        }
+        100%{
+            top: 100%;
+            right: 100%;
+            transform: rotate(360deg) scale(0.2);
+        }
+    }
+}
+
+ @media (min-width: 768px) and (max-width: 1285px){
+    .main{
+        width: 40%;
+        height: auto;
+        margin-top: -18%;
+    }
+    .main p{
+        font-size: 1rem;
+    }
+    #button1, #button2{
+        font-size: 0.6rem;
+    }
+    #secondary-page, #signup{
+        font-size: 0.6rem;
+    }
+    #design1{
+       width: 8rem;
+       height: 8rem;
+    }
+    #design2{
+       width: 8rem; 
+       height: 8rem;
+    }
+    #design3{
+       width: 8rem; 
+       height: 8rem;
+    }
+    #city{
+        height: 45%;
+        width: 50%;
+    }
+    @keyframes move1{
+        0%{
+            top: -10%;
+            right: -10%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 73%;
+            right: 60%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    }   
+    @keyframes move2{
+        0%{
+            top: 3%;
+            right: -10%;
+            transform: rotate(-360deg) scale(0.3);
+        }
+        100%{
+            top: 73%;
+            right: 60%;
+            transform: rotate(360deg) scale(0.3);
+        }
+    } 
+    @keyframes move3{
+        0%{
+            top: -10%;
+            right: 50%;
+            transform: rotate(-360deg) scale(0.2);
+        }
+        100%{
+            top: 73%;
+            right: 72%;
+            transform: rotate(360deg) scale(0.2);
+        }
+    }
+}
+
